@@ -23,3 +23,12 @@
 11) write a program to input a number and print the square root of that number.
 12) write a program to input two number and print the square root of the sum of the squares of both numbers.
 13) write a program to solve : (x+y+z)/x*x
+14) if the basic salary and net salary is given find out the percentage of increasement.
+15)write a program to do input and outpul on the circuit diagram.
+16)write a program to print differnettypes of figure with *.
+17)WAP TO PRINT DIAGONALLY 1 AND ELSE 0 IN A MAATRIX.
+18)WAP TO OUPTPUT THE VALUE OF n!.
+19)WAP TO OUTPUT THE VALUE OF SUM OF FACTORIAL NUMBER UPTO N
+20)WAP TO FIND THE ROOT OF THE X.
+21)MISC.
+22)underroot((m! + n!)/n!)
