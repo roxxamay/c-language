@@ -2,7 +2,7 @@
 1. WAP TO PERFORM THE FOLLOWING OPERATION ON STACK USING ARAAY STATICALLY
               PUSH,POP,PEEP,REVERSE PEEP
 ********************************************************************/
-#include"ds1.h"
+#include"SUA.h"
 
 int main()
 {
