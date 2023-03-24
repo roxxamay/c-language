@@ -93,11 +93,11 @@ int main()
     int choice;
     char another;
 
-    if(fp=fopen("db.txt","rb+")==NULL)      //if file is not created
+    if((fp=fopen("db.txt","rb+"))==NULL)      //if file is not created
     {
         if((fopen("db.txt","wb+"))==NULL)       //then try to create one
         {
-            printf("CAN,T CREATE OR OPEN DATABASE.");
+            printf("CAN'T CREATE OR OPEN DATABASE.");
             return 0 ;
         }
     }
@@ -210,7 +210,7 @@ void password(){
     printf("\nENTER NEW PASSWORD : ");
     fflush(stdin);
     gets(pa.pass);      //put data in pa.pass(in file)
-    printf("SAVE PASSWORD (y/n) : ");
+    printf("\nSAVE PASSWORD (y/n) : ");
     fflush(stdin);
     scanf("%c",&c);
     if(c=='y' || c=='Y' ){
@@ -230,6 +230,7 @@ void password(){
 //for adding records
 
 void add(FILE * fp){
+    system("cls");
     border();
     printf("\n");
     title();
@@ -246,5 +247,225 @@ void add(FILE * fp){
         printf("\n\n\t\tENTER THE FULL NAME OF STUDENT : ");
         fflush(stdin);
         fgets(s.name,100,stdin);
+        s.name[strlen(s.name)-1]='\0';      //to put the null char before the no of characters
+
+        printf("\n\n\t\tENTER DEPERTMENT NAME : ");
+        fflush(stdin);
+        fgets(s.dept,50,stdin);
+        s.dept[strlen(s.dept)-0]='\0';
+
+        printf("\n\n\t\tENTER ROLL NUMBER : ");
+        fflush(stdin);
+        scanf("%d",s.roll);
+
+        printf("\n\n\t\tENTER C.G.P.A : ");
+        fflush(stdin);
+        scanf("%f",&s.cgpa);
+
+        //now write this value into .txt file
+
+        fwrite(&s,sizeof(s),1,fp);
+
+        border();
+
+        printf("\n\n\t\tADD ANOTHER STUDENTS");
+        fflush(stdin);
+        another=getchar();
     }
+}
+
+FILE * del(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    Student s;
+    int flag = 0 ,tempRoll,siz=sizeof(s);
+    FILE *ft;
+
+    if((ft=fopen("temp.txt","wb+"))==NULL){
+        printf("\n\n\t\t\t\t!!!!!ERROR!!!!!\n\t\t");
+        system("pause");
+        return fp;
+    }
+
+    printf("\n\n\t\tENTER ROLL NUMBER OF STUDENT TO DELETE FROM THE RECORD");
+    printf("\n\n\t\tROLL NUMBER : ");
+    scanf("%d",&tempRoll);
+
+    rewind(fp);         //sets the file position to the begining of the file
+
+
+    while((fread(&s,siz,1,fp))==1){
+        flag=1;
+        printf("\n\t\tRECORD DELETED FOR");
+        printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t",s.name,s.dept,s.roll);
+        continue;
+    }
+
+    fwrite(&s,siz,1,ft);
+    //write the value in temp file
+
+    fclose(fp);
+    fclose(ft);
+    remove("db.txt");
+    rename("temp.txt", "db.txt");       //changing the temp in main file
+
+    if((fp=fopen("db.txt","rb+"))==NULL){
+        printf("!!!!ERROR!!!!");
+        return NULL;
+
+    }
+    if(flag==0){
+        printf("\n\n\t\tNO STUDENT FOUND");
+    }
+
+    border();
+    printf("\n\n\t");
+    system("pause");
+    return fp;
+
+}
+
+void display(FILE * fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    Student s;
+    int i ,siz = sizeof(s);
+
+    rewind(fp);
+
+    while((fread(&s,siz,1,fp))==1){
+        printf("\n\t\tNAME : %s",s.name);
+        printf("\n\n\t\tDEPERTMENT : %s",s.dept);
+        printf("\n\n\t\tRoll : %d",s.roll);
+        printf("\n\n\t\tC.G.P.A : %f\n\n",s.cgpa);
+        border();
+    }
+    printf("\n\n\n\n\n");
+    border();
+    printf("\n");
+    border();
+    printf("\n");
+    system("pause");
+}
+
+
+void Indivisual(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    int tempRoll,flag,siz,i;
+    Student s;
+    char another='y';
+
+    siz=sizeof(s);
+
+    while(another=='Y'||another=='y'){
+        printf("\n\n\tENTER ROLL NUMBER : ");
+        scanf("%d",&tempRoll);
+
+        rewind(fp);     //for searching purpose we shoould always use this
+
+        while((fread(&s,siz,1,fp))==1){
+            if(s.roll==tempRoll){
+                flag=1;
+                break;
+            }
+        }
+
+        if(flag==1)
+        {
+            printf("\n\n\t\tNAME : %s",s.name);
+            printf("\n\n\t\tDEPERTMENT : %s",s.dept);
+            printf("\n\n\t\tROLL : %d",s.roll);
+            printf("\n\n\t\tC.G.P.A. : %f\n\n",s.cgpa);
+            border();
+        }
+        else{
+            printf("\n\n\t\t!!!!! ERROR RECORD NOT FOUND !!!!!");
+        }
+        printf("\n\n\t\tSHOW ANOTHER STUDENT INFORMATION (y/n)");
+        fflush(stdin);
+        another = getchar();
+    }
+
+}
+
+void modify(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    Student s;
+    int i,flag=0,tempRoll,siz;
+
+    float cgpa;
+    siz=sizeof(s);
+
+    printf("\n\nENTER THE ROLL NUMBER OF THE STUDENTS : ");
+    scanf("%d",&tempRoll);
+
+    rewind(fp);
+
+    while((fread(&s,siz,1,fp))==1){
+        if(s.roll==tempRoll){
+            flag = 1 ;
+            break;
+        }
+
+    }
+
+    if(flag==1){
+        fseek(fp,-siz,SEEK_CUR);
+        printf("\n\n\t\t\t\t\tRECORD FOUND\n\n\n");
+        border();
+
+        printf("\n\n\t\t\tSTUDENT NAME : %s",s.name);
+        printf("\n\n\t\t\tSTUDENT ROLL : \n\n\n",s.roll);
+        border();
+        printf("\n\n\n\n\t\t\tENTER NEW DATA DOR THE STUDENT\n\n\n");
+        border();
+
+        printf("\n\n\n\t\t\tENTER FULL NAME OF STUDENT : ");
+        fflush(stdin);
+        fgets(s.name,100,stdin);
+        s.name[strlen(s.name)-1]='\0';
+
+        printf("\n\n\t\t\tENTER DEPERTAMENT : ");
+        fflush(stdin);
+        fgets(s.dept,50,stdin);
+        s.dept[strlen(s.name)-1]='\0';
+
+        printf("\n\n\t\t\tENTER ROLL NUMBER : ");
+        scanf("%d",&s.roll);
+
+        printf("\n\n\t\tENTER C.G.P.A. : ");
+        scanf("%f",&s.cgpa);
+
+        //now updat ein the file
+
+        fwrite(&s,sizeof(s),1,fp);
+    }
+    else{
+        printf("\n\n\t!!!! ERROR !!!! RECORD NOT FOUND");
+    }
+
+    printf("\n\n\t");
+    system("pause");
 }
