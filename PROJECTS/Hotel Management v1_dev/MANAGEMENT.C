@@ -12,11 +12,11 @@
 //includes
 
 #include<stdio.h>
-#include<conio.h>
+//#include<conio.h>
 #include<ctype.h>
 #include<stdlib.h>
 #include<time.h>
-#include<windows.h>
+//#include<windows.h>
 
 //DECLEARING FUNCTIONS
 void add(); // FUNCTIONS

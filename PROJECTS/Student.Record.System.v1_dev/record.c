@@ -1,7 +1,7 @@
 /**
  * @file record.c
  * @author @roxxadiiii
- * @brief this is the simple program to mange the records of the students of an institute
+ * @brief this is the simple program to manage the records of the students of an institute.
  * @version 0.1
  * @date 2023-03-20
  * 
@@ -51,7 +51,7 @@ void gotoxy( int x , int y )    //function for going to the positon using coord 
 
 //********************************************
 
-#define Student struct stud
+//#define Student struct stud
 
 //pre-listed function that will be used in the program..
 void add( FILE * fp );
@@ -78,18 +78,18 @@ struct stud
     char dept[50];
     int roll;
     float cgpa;
-};
+}s;
 
 int main()
 {
     long long int t ;
-    int k = 0 ,i , option ;
-    char c , pass[50];
+    int k = 0 ,i ,id ;
+    char c , pass[30];
     SetConsoleTitle("STUDENT MANAGEMENT SYSTEM  || S.H.I.T.");
     time_t;
     time(&t);
     FILE * fp ;
-    Student s;
+    //Student s;
     int choice;
     char another;
 
@@ -101,6 +101,7 @@ int main()
             return 0 ;
         }
     }
+    
     system("cls");
     gotoxy(42,8);
     printf("LOGIN(if first login press ENTER)");
@@ -129,8 +130,11 @@ int main()
     pass[k]='\0';       //null character
     tp=fopen("password.txt","r+");
     fgets(pa.pass,25,tp);
+
+
     if(strcmp(pass,pa.pass)==0)
     {
+        
         system("cls");
         gotoxy(15,6);
         printf("<<<<< LOADING PLEASE WAIT>>>>>");
@@ -155,74 +159,92 @@ int main()
 
         getch();
 
-    }
-    system("cls");
-    {
-        border();
-        printf("\n");
-        title();
-        printf("\n");
-        border();
-    }
-    
-    printf("\n\n\t\t\t\t1---> ADD STUDENTS");
-    printf("\n\t\t\t\t2---> MODIFY STUDENTS");
-    printf("\n\t\t\t\t3---> SHOW ALL STUDENTS");
-    printf("\n\t\t\t\t4---> IDNIVIDUAL VIEW");
-    printf("\n\t\t\t\t5---> REMOVE STUDENT");
-    printf("\n\t\t\t\t6---> CHANGE PASSWORD");
-    printf("\n\t\t\t\t7--->LOGOUT\n\n\n");
-    border();
-    printf("\n\nCurrent date and time %s\n\n",ctime(&t));
-    border();
-    printf("\n\n");
-    printf("ENTER YOUR CHOICE : --->");
-    scanf("%d",&option);
+        while (1)
+        {
+            system("cls");
+            border();
+            printf("\n");
+            title();
+            printf("\n");
+            border();
 
-    switch(option){
-        case 1:add(fp);
+            printf("\n\n\t\t\t\t1---> ADD STUDENTS");
+            printf("\n\t\t\t\t2---> MODIFY STUDENTS");
+            printf("\n\t\t\t\t3---> SHOW ALL STUDENTS");
+            printf("\n\t\t\t\t4---> IDNIVIDUAL VIEW");
+            printf("\n\t\t\t\t5---> REMOVE STUDENT");
+            printf("\n\t\t\t\t6---> CHANGE PASSWORD");
+            printf("\n\t\t\t\t7--->LOGOUT\n\n\n");
+            border();
+            printf("\n\nCurrent date and time %s\n\n", ctime(&t));
+            border();
+            printf("\n\n");
+            printf("ENTER YOUR CHOICE : --->");
+            scanf("%d", &choice);
+
+            switch (choice)
+            {
+            case 1:
+                add(fp);
                 break;
-        case 2:modify(fp);
+            case 2:
+                modify(fp);
                 break;
-        case 3:display(fp);
+            case 3:
+                display(fp);
                 break;
-        case 4:Indivisual(fp);
+            case 4:
+                Indivisual(fp);
                 break;
-        case 5:fp=del(fp);
+            case 5:
+                fp = del(fp);
                 break;
-        case 6:system("cls");
+            case 6:
+                system("cls");
                 password();
                 break;
-        case 7:return 1;
+            case 7:
+                return 1;
                 break;
-        default:
+            default:
                 printf("\n\t\t\tNO ACTION DETECTED");
                 printf("\n\t\tPress Any Key");
                 getch();
                 system("pause");
+            }
+        }
     }
+    else{
+        system("cls");
+        printf("WRONG PASSWORD . GET OUT");
+        getch();
+    }
+    return 1;
+
 }
 
 //functions for password
 
 void password(){
-    char c;
+    char save;
     printf("\nENTER NEW PASSWORD : ");
+    scanf("%s",&pa.pass);    //put data in pa.pass(in file)
+    printf("\n");
     fflush(stdin);
-    gets(pa.pass);      //put data in pa.pass(in file)
     printf("\nSAVE PASSWORD (y/n) : ");
-    fflush(stdin);
-    scanf("%c",&c);
-    if(c=='y' || c=='Y' ){
+    save=getche();
+    
+    if(save=='y' || save=='Y' ){
         tp=fopen("password.txt","w+");
         fwrite(&pa,sizeof(pa),1,tp);
         fclose(tp);
-        printf("\n\t\tPassword Is saved");
+        printf("\n\t\tPassword Is saved/n/n");
+        system("pause");
     }
     else
     {
-        printf("PASSWORD IS NOT SAVED...");
-        printf("Press Any Key To Continue >>>>>");
+        printf("\nPASSWORD IS NOT SAVED...");
+        printf("\n\nPress Any Key To Continue >>>>>");
         getch();
     }
 }
@@ -230,47 +252,46 @@ void password(){
 //for adding records
 
 void add(FILE * fp){
-    system("cls");
-    border();
-    printf("\n");
-    title();
-    printf("\n");
-    border();
+    {
+        system("cls");
+        border();
+        printf("\n");
+        title();
+        printf("\n");
+        border();
+    }
+
 
     char another ='y';
-    Student s;
     int i;
     float cgpa;
 
     fseek(fp,0,SEEK_END);        //at the end of the data
-    while(another=='y' ||another=='Y'){
+    while(another=='y'||another=='Y'){
+
+       
         printf("\n\n\t\tENTER THE FULL NAME OF STUDENT : ");
-        fflush(stdin);
-        fgets(s.name,100,stdin);
-        s.name[strlen(s.name)-1]='\0';      //to put the null char before the no of characters
+        scanf("%s",&s.name);   
 
         printf("\n\n\t\tENTER DEPERTMENT NAME : ");
-        fflush(stdin);
-        fgets(s.dept,50,stdin);
-        s.dept[strlen(s.dept)-0]='\0';
+        scanf("%s",&s.dept);
 
         printf("\n\n\t\tENTER ROLL NUMBER : ");
-        fflush(stdin);
-        scanf("%d",s.roll);
+        scanf("%d",&s.roll);
 
         printf("\n\n\t\tENTER C.G.P.A : ");
-        fflush(stdin);
         scanf("%f",&s.cgpa);
 
         //now write this value into .txt file
 
         fwrite(&s,sizeof(s),1,fp);
+        fflush(stdin);
 
         border();
 
-        printf("\n\n\t\tADD ANOTHER STUDENTS");
+        printf("\n\n\t\tADD ANOTHER STUDENTS :");
         fflush(stdin);
-        another=getchar();
+        another=getche();
     }
 }
 
@@ -282,7 +303,6 @@ FILE * del(FILE *fp){
     printf("\n");
     border();
 
-    Student s;
     int flag = 0 ,tempRoll,siz=sizeof(s);
     FILE *ft;
 
@@ -300,13 +320,17 @@ FILE * del(FILE *fp){
 
 
     while((fread(&s,siz,1,fp))==1){
-        flag=1;
-        printf("\n\t\tRECORD DELETED FOR");
-        printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t",s.name,s.dept,s.roll);
-        continue;
+        if(s.roll==tempRoll)
+        {
+            flag = 1;
+            printf("\n\t\tRECORD DELETED FOR");
+            printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t", s.name, s.dept, s.roll);
+            continue;
+        }
+        fwrite(&s, siz, 1, ft);
     }
 
-    fwrite(&s,siz,1,ft);
+
     //write the value in temp file
 
     fclose(fp);
@@ -338,7 +362,7 @@ void display(FILE * fp){
     printf("\n");
     border();
 
-    Student s;
+    //Student s;
     int i ,siz = sizeof(s);
 
     rewind(fp);
@@ -350,11 +374,9 @@ void display(FILE * fp){
         printf("\n\n\t\tC.G.P.A : %f\n\n",s.cgpa);
         border();
     }
-    printf("\n\n\n\n\n");
+    printf("\n\n");
     border();
-    printf("\n");
-    border();
-    printf("\n");
+    printf("\n\n");
     system("pause");
 }
 
@@ -368,7 +390,7 @@ void Indivisual(FILE *fp){
     border();
 
     int tempRoll,flag,siz,i;
-    Student s;
+    //Student s;
     char another='y';
 
     siz=sizeof(s);
@@ -376,6 +398,7 @@ void Indivisual(FILE *fp){
     while(another=='Y'||another=='y'){
         printf("\n\n\tENTER ROLL NUMBER : ");
         scanf("%d",&tempRoll);
+        flag=0;
 
         rewind(fp);     //for searching purpose we shoould always use this
 
@@ -397,9 +420,10 @@ void Indivisual(FILE *fp){
         else{
             printf("\n\n\t\t!!!!! ERROR RECORD NOT FOUND !!!!!");
         }
-        printf("\n\n\t\tSHOW ANOTHER STUDENT INFORMATION (y/n)");
+        printf("\n\n\t\tSHOW ANOTHER STUDENT INFORMATION (y/n) : ");
         fflush(stdin);
-        another = getchar();
+        another = getche();
+        
     }
 
 }
@@ -412,7 +436,7 @@ void modify(FILE *fp){
     printf("\n");
     border();
 
-    Student s;
+    //Student s;
     int i,flag=0,tempRoll,siz;
 
     float cgpa;
@@ -432,25 +456,21 @@ void modify(FILE *fp){
     }
 
     if(flag==1){
-        fseek(fp,-siz,SEEK_CUR);
+
         printf("\n\n\t\t\t\t\tRECORD FOUND\n\n\n");
         border();
 
         printf("\n\n\t\t\tSTUDENT NAME : %s",s.name);
-        printf("\n\n\t\t\tSTUDENT ROLL : \n\n\n",s.roll);
+        printf("\n\n\t\t\tSTUDENT ROLL : %d/n",s.roll);
         border();
         printf("\n\n\n\n\t\t\tENTER NEW DATA DOR THE STUDENT\n\n\n");
         border();
 
         printf("\n\n\n\t\t\tENTER FULL NAME OF STUDENT : ");
-        fflush(stdin);
-        fgets(s.name,100,stdin);
-        s.name[strlen(s.name)-1]='\0';
+        scanf("%s",&s.name);
 
         printf("\n\n\t\t\tENTER DEPERTAMENT : ");
-        fflush(stdin);
-        fgets(s.dept,50,stdin);
-        s.dept[strlen(s.name)-1]='\0';
+        scanf("%s",&s.dept);
 
         printf("\n\n\t\t\tENTER ROLL NUMBER : ");
         scanf("%d",&s.roll);
@@ -458,9 +478,10 @@ void modify(FILE *fp){
         printf("\n\n\t\tENTER C.G.P.A. : ");
         scanf("%f",&s.cgpa);
 
-        //now updat ein the file
-
+        //now update in the file
+        fseek(fp, -siz, SEEK_CUR);
         fwrite(&s,sizeof(s),1,fp);
+        fflush(stdin);
     }
     else{
         printf("\n\n\t!!!! ERROR !!!! RECORD NOT FOUND");
