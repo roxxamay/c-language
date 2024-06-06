@@ -1,0 +1,2534 @@
+---- ./11.cpp ----
+/**
+ * @file 11.cpp
+ * @author @roxxamay
+ * @brief this is the program number 11 of pattern
+ * @version 0.1
+ * @date 2022-12-03
+ * 
+ * 
+ */
+
+#include "iostream"
+
+using namespace std ;
+
+int main()
+{
+    int n ;
+
+    cout  <<  "enter the number of lines : "  ;
+    cin  >>  n ;
+
+    //calculation
+
+}
+
+
+---- ./BEGINNER/1.c ----
+//S=1+2+3+4+.........+N
+#include"conio.h"
+#include"math.h"
+#include"stdio.h"
+int main()
+{
+    int n,s;
+    s=0;
+    printf("\nENTER THE DESIRED NUMBER OF TERMS:-");
+    scanf("%i",&n);
+    s=(n*(n+1))/2;
+    printf("\nSUM=%d",s);
+    getch();
+}
+
+
+---- ./BEGINNER/10.c ----
+/*********************************************************************
+find the area and volume of sphere?
+********************************************************************/
+#include"main.h"
+int main()
+{
+    float r,a,v,m;
+    printf("\nENTER THE DESIRED LENGTH OF RADIUS:");
+    scanf("%f",&r);
+    v=4*3.14*r*r*r/3;
+    a=4*3.14*r*r;
+    printf("\nHENCE AREA=%f",a);
+    printf("\n HENCE VOLUME=%f",v);
+    getch();
+}
+
+
+---- ./BEGINNER/11.c ----
+/*********************************************************************
+find the area and volume of cylinder?
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    float r,h,a,v;
+    printf("\nENTER THE DESIRED HEIGHT OF CYLINFER:");
+    scanf("%f",&h);
+    printf("\n ENTER THE DESIRED RADIUS:");
+    scanf("%f",&r);
+    
+    a=2*3.14*r*(r+h);
+    v=r*r*3.14*h;
+    printf("\nHENCE AREA OF CYLINDER:  %f",a);
+    printf("\nHENCE VOLUME OF CYLINDER:  %f",v);
+    getch();
+
+}
+
+
+---- ./BEGINNER/12.c ----
+/*********************************************************************
+find the area and volume of cone?
+********************************************************************/
+#include"main.h"
+
+int main()
+{
+    float r,h,l,a,v;
+    printf("ENTER THE DESIRED RADIUS:");
+    scanf("%f",&r);
+    printf("\nENTER THE DESIRED HEIGHT:");
+    scanf("%f",&h);
+
+    l=sqrt(r*r+h*h);
+    a=3.14*(l+r);
+    v=3.14*r*r*h/3.0;
+
+    printf("HENCE AREA OF CONE:  %f",a);
+    printf("\nHENCE VOLUME OF CONE:  %f",v);
+    getch();
+
+}
+
+
+---- ./BEGINNER/13.c ----
+/*********************************************************************
+find the area and volume of prism?
+********************************************************************/
+
+#include"main.h"
+
+int main()
+{
+    int area,v,s,a,b,c,h;
+
+    printf("\nENTER THE 1ST SIDE OF TRAINGULAR PRISM:");
+    scanf("%i",&a);
+
+    printf("\nENTER THE 2nd SIDE OF TRAINGULAR PRISM:");
+    scanf("%i",&b);
+
+    printf("\nENTER THE 3rd SIDE OF TRAINGULAR PRISM:");
+    scanf("%i",&c);
+
+    printf("\nENTER THE HEIGHT OF TRAINGULAR PRISM:");
+    scanf("%i",&h);
+    //CALCULATION
+
+    s=(a+b+c)/2.0;
+    v=s*sqrt(s*(s-a)*(s-b)*(s-c))*h;
+    area=((2*s*sqrt(s*(s-a)*(s-b)*(s-c)))+((a+b+c)*h));
+    
+    printf("\nHENCE THE REQUIRED AREA:  %i",area);
+    printf("\nHENCE THE REQUIRED VOLUME:  %i",v);
+    getch();
+
+}
+
+
+---- ./BEGINNER/14.c ----
+/*********************************************************************
+write a program to find the simple and compound intrest?
+********************************************************************/
+
+#include"main.h"
+
+int main()
+{
+    float p,r,si,a;
+    int t;
+    printf("\nENTER THE PRINCIPAL:  ");
+    scanf("%f",&p);
+    printf("\nENTER THE RATE:  ");
+    scanf("%f",&r);
+    printf("\nENTER THE TIME:  ");
+    scanf("%i",&t);
+    // calculation
+
+    si=p*r*t/100.0;
+    a=p+si;
+    printf("\nHENCE SIMPLE INTREST:  %f",si);
+    printf("\nHENCE AMOUNT:  %f",a);
+    getch();
+
+
+}
+
+
+---- ./BEGINNER/15.c ----
+/*********************************************************************
+write program to find area and perimeter of circle?
+********************************************************************/
+
+#include"main.h"
+
+int main()
+{
+    float r,p,a;
+    
+    printf("ENTER THE DESIRED RADIUS:  ");
+    scanf("%f",&r);
+
+    //calculation
+
+    p=2*3.14*r;
+    a=3.14*r*r;
+
+    printf("\nHENCE THE AREA OF CIRCLE IS:  %f",a);
+    printf("\nHENCE THE PERIMETER OF CIRCLE:  %f",p);
+    getch();
+
+
+}
+
+
+---- ./BEGINNER/16.c ----
+/*********************************************************************
+write program to find area and perimeter of triangle?
+********************************************************************/
+#include"main.h"
+
+int main()
+{
+    int a,b,c,s,p,ar;
+    printf("\nENTER THE 1ST SIDE OF TRAINLGE:  ");
+    scanf("%i",&a);
+    printf("\nENTER THE 2ND SIDE OF TRAINGLE:  ");
+    scanf("%i",&b);
+    printf("\nENTER THE 3RD SIDE OF TRAINGLE:  ");
+    scanf("%i",&c);
+    //calculation
+    s=(a+b+c)/2;
+    ar=sqrt(s*(s-a)*(s-b)*(s-c));
+    p=a+b+c;
+    printf("\nHENCE THE AREA:  %i",ar);
+    printf("\nHENCE THE PERIMETER:  %i",p);
+    getch();
+   
+}
+
+
+---- ./BEGINNER/17.c ----
+/*********************************************************************
+write program to find area and perimeter of square?
+********************************************************************/
+#include"main.h"
+
+int main()
+{
+    int s,p,a;
+    printf("LENGTH OF SIDE:  ");
+    scanf("%i",&s);
+    a=s*s;
+    p=4*s;
+    printf("\nHENCE THE AREA:  %i",a);
+    printf("\n HENCE THE PERIMETER:  %i",p);
+    getch();
+
+
+}
+
+
+---- ./BEGINNER/18.c ----
+/*********************************************************************
+write program to find the distance between two co ordinate point?
+********************************************************************/
+
+#include"main.h"
+
+int main()
+{
+    int z,x,y,a,b;
+    printf("HERE (X,Y) ARE THE CORDINATE OF THE 1ST POINT AND (A,B) ARE THE CORDINATE OF THE SECONT POINT");
+    printf("\nINTPUT THE CORDINATE OF 1ST POINT IN FORM OF (X,Y):  ");
+    scanf("%i,%i",&x,&y);
+    printf("\nINTPUT THE CORDINATE OF 1ST POINT IN FORM OF (a,b):  ");
+    scanf("%i,%i",&a,&b);
+    
+    //calculation
+
+    z=sqrt(((a-x)*(a-x))+((b-y)*(b-y)));
+
+    printf("\nHENCE THE DISTANCE BETWEEN THE TWO POINTS ARE:  %i",z);
+    getch();
+
+}
+
+
+---- ./BEGINNER/2.c ----
+/*********************************************************************
+find the area and perimeter of rectangle.
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    int l,b,a,p;
+    printf("\nENTER THE LENGTH OF RECTANGLE:");
+    scanf("%i",&l);
+    printf("\nENTER THE BREADTH OF RECTANGLE:");
+    scanf("%i",&b);
+    a=l*b;
+    p=2*(l+b);
+    printf("AREA:%i",a);
+    printf("\nPERIMETER:%i",p);
+    getch();
+
+}
+
+
+---- ./BEGINNER/3.c ----
+/*********************************************************************
+determine between getch,getche,getchr.
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    char a,b,c,d;
+
+
+    printf("\nENTER YOUR FIRST CHARACTER:");
+    a=getch();
+
+    printf("\nENTER YOUR SECOND CHARACTER:");
+    b=getche();
+
+    printf("\nENTER YOUR THIRD CHARACTER:");
+   
+    c=getchar();
+
+    printf("\nENTER YOUR FOURTH CHARACTER:");
+    
+    scanf("%c",&d);
+
+    printf("\na=%c\nb=%c\nc=%c\nd=%c",a,b,c,d);
+
+    getch();
+
+}
+
+
+---- ./BEGINNER/4.c ----
+/*********************************************************************
+sum of the squares of the natural numbers till n.
+********************************************************************/
+#include"main.h"
+
+int main()
+{
+    int n,s;
+    printf("ENTER THE DESIRED NUMBERS OF TERMS:");
+    scanf("%i",&n);
+    s=n*(n+1)*(2*n+1)/6;
+    printf("\nSUM:%i",s);
+    getch();
+}
+
+
+---- ./BEGINNER/5.c ----
+/*********************************************************************
+sum of the cubes of the natural numbers till n.
+********************************************************************/
+#include"main.h"
+
+int main()
+{
+    int n,s;
+    printf("ENTER THE DESIRED NUMBERS OF TERMS:");
+    scanf("%i",&n);
+    s=(n*(n+1)/2)*(n*(n+1)/2);
+    //altier; pow((n*(n+1)/2),2);
+    printf("SUM:%i",s);
+    getch();
+
+}
+
+
+---- ./BEGINNER/6.c ----
+/*********************************************************************
+print the value of n where n=?.
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    int n;
+
+   printf("\nINPUT THE DESIRED NUMBER:");
+   scanf("%i",&n);
+   printf("THE NUMBER IS:%d",n);
+   getch();
+
+}
+
+
+---- ./BEGINNER/7.c ----
+/*********************************************************************
+print the value of x where n=?.
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    float x;
+    printf("ENTER THE DESIRED NUMBER:");
+    scanf("%f",&x);
+    printf("\nx=%10.2f",x);
+    printf("\nx=%-10.2f",x);
+    printf("\nx=%.2f",x);
+    printf("\nx=%0f",x);
+    printf("\nx=%f",x);
+    printf("\nx=%3.2f",x);
+
+    getch();
+    
+    
+}
+
+
+
+---- ./BEGINNER/8.c ----
+/*********************************************************************
+find the area and volume of cuboid?
+********************************************************************/
+
+#include"main.h"
+int main()
+{
+    int l,b,h,a,v;
+    printf("\nLENGTH OF THE CUBOID:");
+    scanf("%i",&l);
+    printf("\nBREADTH OF THE CUBOID:");
+    scanf("%i",&b);
+    printf("\nHEIGHT OF THE CUBOID:");
+    scanf("%i",&h);
+
+    a=2*(l*b+b*h+h*l);
+    v=l*b*h;
+    printf("\nHENCE THE AREA IS %i",a);
+    printf("\nHENCE THE VOLUME IS %i",v);
+    getch();
+}
+
+
+---- ./BEGINNER/donut.c ----
+#include"stdio.h"
+#include"string.h"
+
+int k;
+
+double sin(),cos();
+
+int main(){
+    float A=0,B=0,i,j,z[1760];
+    char b[1760];
+    printf("\n1b2J");
+    for(;;)
+    {
+        memset(b, 32,1760);
+        memset(z, 0, 7040);
+        for(j=0;6.28>i;i+=0.08)
+        {
+            for(i=0;6.28>i;i+=0.08)
+            {
+                float c=sin(i),d=cos(j),e=sin(A),f=sin(j),g=cos(A),h=d+2,D=1/(c*h*e+f+g+5),l=cos(i),m=cos(B),n=sin(B),n=sin(B),
+                        m=cos(B),n=sin(B),t=c*h*g-f*c;
+
+                int x=40+30*D*(l*h*m-t*n);
+                int y = 12+15
+            }
+        }
+    }
+}
+
+
+---- ./CodeCombiner.sh ----
+#!/bin/bash
+
+tput setaf 5
+
+cat <<"EOF"
+
+░▒█▀▀▄░▄▀▀▄░█▀▄░█▀▀░▒█▀▀▄░▄▀▀▄░█▀▄▀█░█▀▀▄░░▀░░█▀▀▄░█▀▀░█▀▀▄
+░▒█░░░░█░░█░█░█░█▀▀░▒█░░░░█░░█░█░▀░█░█▀▀▄░░█▀░█░▒█░█▀▀░█▄▄▀
+░▒█▄▄▀░░▀▀░░▀▀░░▀▀▀░▒█▄▄▀░░▀▀░░▀░░▒▀░▀▀▀▀░▀▀▀░▀░░▀░▀▀▀░▀░▀▀
+
+EOF
+
+
+echo
+echo
+echo
+
+cat <<"EOF"
+
+░▒█▀▀▀█░▀█▀░█▀▀▄░█▀▀▄░▀█▀░░▀░░█▀▀▄░█▀▀▀░░░▀█▀░█░░░░█▀▀░░░█▀▀░░▀░░█░░█▀▀░░░█▀▄░▄▀▀▄░█▀▀▄░█▀▀░▄▀▀▄░█░░░▀░░█▀▄░█▀▀▄░▀█▀░░▀░░▄▀▀▄░█▀▀▄░░░▄▀▀▄░█▀▀▄░▄▀▀▄░█▀▄░█▀▀░█▀▀░█▀▀░░░░░░░░░
+░░▀▀▀▄▄░░█░░█▄▄█░█▄▄▀░░█░░░█▀░█░▒█░█░▀▄░░░░█░░█▀▀█░█▀▀░░░█▀░░░█▀░█░░█▀▀░░░█░░░█░░█░█░▒█░▀▀▄░█░░█░█░░░█▀░█░█░█▄▄█░░█░░░█▀░█░░█░█░▒█░░░█▄▄█░█▄▄▀░█░░█░█░░░█▀▀░▀▀▄░▀▀▄░▄▄░▄▄░▄▄
+░▒█▄▄▄█░░▀░░▀░░▀░▀░▀▀░░▀░░▀▀▀░▀░░▀░▀▀▀▀░░░░▀░░▀░░▀░▀▀▀░░░▀░░░▀▀▀░▀▀░▀▀▀░░░▀▀▀░░▀▀░░▀░░▀░▀▀▀░░▀▀░░▀▀░▀▀▀░▀▀░░▀░░▀░░▀░░▀▀▀░░▀▀░░▀░░▀░░░█░░░░▀░▀▀░░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀░▀▀░▀▀
+
+EOF
+echo
+echo
+echo
+
+cat <<"EOF"
+
+░▀█▀░█▀▀▄░░▀░░▀█▀░░▀░░█▀▀▄░█░░░▀░░▀▀█░░▀░░█▀▀▄░█▀▀▀░░░▀█▀░█░░░░█▀▀░░░▄▀▀▄░█░▒█░▀█▀░▄▀▀▄░█░▒█░▀█▀░░░█▀▀░░▀░░█░░█▀▀░░░░░░░░░
+░▒█░░█░▒█░░█▀░░█░░░█▀░█▄▄█░█░░░█▀░▄▀▒░░█▀░█░▒█░█░▀▄░░░░█░░█▀▀█░█▀▀░░░█░░█░█░▒█░░█░░█▄▄█░█░▒█░░█░░░░█▀░░░█▀░█░░█▀▀░▄▄░▄▄░▄▄
+░▄█▄░▀░░▀░▀▀▀░░▀░░▀▀▀░▀░░▀░▀▀░▀▀▀░▀▀▀░▀▀▀░▀░░▀░▀▀▀▀░░░░▀░░▀░░▀░▀▀▀░░░░▀▀░░░▀▀▀░░▀░░█░░░░░▀▀▀░░▀░░░░▀░░░▀▀▀░▀▀░▀▀▀░▀▀░▀▀░▀▀
+
+EOF
+
+# Output file name
+output_file="ExportedContent.txt"
+
+# Clear the output file or create it if it doesn't exist
+> "$output_file"
+echo
+echo
+echo
+
+cat <<"EOF"
+
+░▒█▀▀▀█░█▀▀░█▀▀▄░█▀▀▄░█▀▄░█░░░░░▀░░█▀▀▄░█▀▀▀░░░█▀▀░▄▀▀▄░█▀▀▄░░░█▀▀░░▀░░█░░█▀▀░█▀▀
+░░▀▀▀▄▄░█▀▀░█▄▄█░█▄▄▀░█░░░█▀▀█░░█▀░█░▒█░█░▀▄░░░█▀░░█░░█░█▄▄▀░░░█▀░░░█▀░█░░█▀▀░▀▀▄
+░▒█▄▄▄█░▀▀▀░▀░░▀░▀░▀▀░▀▀▀░▀░░▀░▀▀▀░▀░░▀░▀▀▀▀░░░▀░░░░▀▀░░▀░▀▀░░░▀░░░▀▀▀░▀▀░▀▀▀░▀▀▀
+
+EOF
+
+# Export contents of .sh, .cpp, and .c files
+find . -type f \( -name "*.sh" -o -name "*.cpp" -o -name "*.c" \) -exec sh -c 'echo "Appending content of $1"
+echo "---- $1 ----" >> '"$output_file"'
+cat "$1" >> '"$output_file"'
+echo -e "\n\n" >> '"$output_file"'' _ {} \;
+echo
+echo
+echo
+echo "All contents have been written to $output_file"
+
+
+
+
+---- ./PROJECTS/Student.Record.System.v1_dev/record.c ----
+/**
+ * @file record.c
+ * @author @roxxadiiii
+ * @brief this is the simple program to manage the records of the students of an institute.
+ * @version 0.1
+ * @date 2023-03-20
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+#include<windows.h>
+#include<time.h>
+
+//making custom function
+
+void border()               //function for border
+{
+    int i;
+    for(i=0;i<=89;i++)
+    {
+        printf("*");
+    }
+    printf("\n");
+    for (i = 0; i <= 89; i++)
+    {
+        printf("*");
+    }
+}
+
+void title()                //function for the titles of institute
+{
+    for(int i =0 ; i<=20 ; i++)
+    {
+        printf(" ");
+
+    }
+    printf("South Harmon Institute of Technology (S.H.I.T.)");
+}
+
+void gotoxy( int x , int y )    //function for going to the positon using coord i.e. coordinates...
+{
+    COORD crd={x,y};
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),crd);
+}
+
+
+
+//********************************************
+
+//#define Student struct stud
+
+//pre-listed function that will be used in the program..
+void add( FILE * fp );
+void modify( FILE * fp );
+void display( FILE * fp );
+void Indivisual( FILE * fp );
+void password();        //for password
+FILE * del( FILE * fp );
+
+FILE *tp;           //temp file for password
+
+//defining the space for password
+
+struct pass
+{
+    char pass[25];
+}pa;
+
+//defining the space for all the left all variables..
+
+struct stud
+{
+    char name[100];
+    char dept[50];
+    int roll;
+    float cgpa;
+}s;
+
+int main()
+{
+    long long int t ;
+    int k = 0 ,i ,id ;
+    char c , pass[30];
+    SetConsoleTitle("STUDENT MANAGEMENT SYSTEM  || S.H.I.T.");
+    time_t;
+    time(&t);
+    FILE * fp ;
+    //Student s;
+    int choice;
+    char another;
+
+    if((fp=fopen("db.txt","rb+"))==NULL)      //if file is not created
+    {
+        if((fopen("db.txt","wb+"))==NULL)       //then try to create one
+        {
+            printf("CAN'T CREATE OR OPEN DATABASE.");
+            return 0 ;
+        }
+    }
+    
+    system("cls");
+    gotoxy(42,8);
+    printf("LOGIN(if first login press ENTER)");
+    gotoxy(42,10);
+    printf("========================================");
+    gotoxy(42,11);
+    printf("|\tENTER PASSWORD:                  |");
+    gotoxy(42,12);
+    printf("|======================================|");
+    gotoxy(63,11);
+    while(k<10)
+    {
+        pass[k]=getch();
+        char s = pass[k];
+        if( s==13 )     //enter=13 
+        {
+            break;
+        }
+        else
+        {
+            printf("*");
+        }
+        k++;
+    }
+
+    pass[k]='\0';       //null character
+    tp=fopen("password.txt","r+");
+    fgets(pa.pass,25,tp);
+
+
+    if(strcmp(pass,pa.pass)==0)
+    {
+        
+        system("cls");
+        gotoxy(15,6);
+        printf("<<<<< LOADING PLEASE WAIT>>>>>");
+        for( i=0 ; i < 5 ; i++ )
+        {
+            printf("\t(*_*)");
+            Sleep(500);
+        }
+        gotoxy(5,10);
+        puts(
+        "\n\t\t##   ##  ### ###  ####      ## ##    ## ##   ##   ##  ### ###  "
+        "\n\t\t##   ##   ##  ##   ##      ##   ##  ##   ##   ## ##    ##  ##  "
+        "\n\t\t##   ##   ##       ##      ##       ##   ##  # ### #   ##      "
+        "\n\t\t## # ##   ## ##    ##      ##       ##   ##  ## # ##   ## ##   "
+        "\n\t\t# ### #   ##       ##      ##       ##   ##  ##   ##   ##     " 
+        "\n\t\t##   ##   ##  ##   ##  ##  ##   ##  ##   ##  ##   ##   ##  ##  "
+        "\n\t\t##   ##  ### ###  ### ###   ## ##    ## ##   ##   ##  ### ### ");
+
+        printf("\n\n\n\n\t\t\tCurrent Date And Time : %s", ctime(&t));
+
+        printf("\n\n\n\n\t\t\t\tpress any key to continue.....");
+
+        getch();
+
+        while (1)
+        {
+            system("cls");
+            border();
+            printf("\n");
+            title();
+            printf("\n");
+            border();
+
+            printf("\n\n\t\t\t\t1---> ADD STUDENTS");
+            printf("\n\t\t\t\t2---> MODIFY STUDENTS");
+            printf("\n\t\t\t\t3---> SHOW ALL STUDENTS");
+            printf("\n\t\t\t\t4---> IDNIVIDUAL VIEW");
+            printf("\n\t\t\t\t5---> REMOVE STUDENT");
+            printf("\n\t\t\t\t6---> CHANGE PASSWORD");
+            printf("\n\t\t\t\t7--->LOGOUT\n\n\n");
+            border();
+            printf("\n\nCurrent date and time %s\n\n", ctime(&t));
+            border();
+            printf("\n\n");
+            printf("ENTER YOUR CHOICE : --->");
+            scanf("%d", &choice);
+
+            switch (choice)
+            {
+            case 1:
+                add(fp);
+                break;
+            case 2:
+                modify(fp);
+                break;
+            case 3:
+                display(fp);
+                break;
+            case 4:
+                Indivisual(fp);
+                break;
+            case 5:
+                fp = del(fp);
+                break;
+            case 6:
+                system("cls");
+                password();
+                break;
+            case 7:
+                return 1;
+                break;
+            default:
+                printf("\n\t\t\tNO ACTION DETECTED");
+                printf("\n\t\tPress Any Key");
+                getch();
+                system("pause");
+            }
+        }
+    }
+    else{
+        system("cls");
+        printf("WRONG PASSWORD . GET OUT");
+        getch();
+    }
+    return 1;
+
+}
+
+//functions for password
+
+void password(){
+    char save;
+    printf("\nENTER NEW PASSWORD : ");
+    scanf("%s",&pa.pass);    //put data in pa.pass(in file)
+    printf("\n");
+    fflush(stdin);
+    printf("\nSAVE PASSWORD (y/n) : ");
+    save=getche();
+    
+    if(save=='y' || save=='Y' ){
+        tp=fopen("password.txt","w+");
+        fwrite(&pa,sizeof(pa),1,tp);
+        fclose(tp);
+        printf("\n\t\tPassword Is saved/n/n");
+        system("pause");
+    }
+    else
+    {
+        printf("\nPASSWORD IS NOT SAVED...");
+        printf("\n\nPress Any Key To Continue >>>>>");
+        getch();
+    }
+}
+
+//for adding records
+
+void add(FILE * fp){
+    {
+        system("cls");
+        border();
+        printf("\n");
+        title();
+        printf("\n");
+        border();
+    }
+
+
+    char another ='y';
+    int i;
+    float cgpa;
+
+    fseek(fp,0,SEEK_END);        //at the end of the data
+    while(another=='y'||another=='Y'){
+
+       
+        printf("\n\n\t\tENTER THE FULL NAME OF STUDENT : ");
+        scanf("%s",&s.name);   
+
+        printf("\n\n\t\tENTER DEPERTMENT NAME : ");
+        scanf("%s",&s.dept);
+
+        printf("\n\n\t\tENTER ROLL NUMBER : ");
+        scanf("%d",&s.roll);
+
+        printf("\n\n\t\tENTER C.G.P.A : ");
+        scanf("%f",&s.cgpa);
+
+        //now write this value into .txt file
+
+        fwrite(&s,sizeof(s),1,fp);
+        fflush(stdin);
+
+        border();
+
+        printf("\n\n\t\tADD ANOTHER STUDENTS :");
+        fflush(stdin);
+        another=getche();
+    }
+}
+
+FILE * del(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    int flag = 0 ,tempRoll,siz=sizeof(s);
+    FILE *ft;
+
+    if((ft=fopen("temp.txt","wb+"))==NULL){
+        printf("\n\n\t\t\t\t!!!!!ERROR!!!!!\n\t\t");
+        system("pause");
+        return fp;
+    }
+
+    printf("\n\n\t\tENTER ROLL NUMBER OF STUDENT TO DELETE FROM THE RECORD");
+    printf("\n\n\t\tROLL NUMBER : ");
+    scanf("%d",&tempRoll);
+
+    rewind(fp);         //sets the file position to the begining of the file
+
+
+    while((fread(&s,siz,1,fp))==1){
+        if(s.roll==tempRoll)
+        {
+            flag = 1;
+            printf("\n\t\tRECORD DELETED FOR");
+            printf("\n\n\t\t%s\n\n\t\t%s\n\n\t\t%d\n\t", s.name, s.dept, s.roll);
+            continue;
+        }
+        fwrite(&s, siz, 1, ft);
+    }
+
+
+    //write the value in temp file
+
+    fclose(fp);
+    fclose(ft);
+    remove("db.txt");
+    rename("temp.txt", "db.txt");       //changing the temp in main file
+
+    if((fp=fopen("db.txt","rb+"))==NULL){
+        printf("!!!!ERROR!!!!");
+        return NULL;
+
+    }
+    if(flag==0){
+        printf("\n\n\t\tNO STUDENT FOUND");
+    }
+
+    border();
+    printf("\n\n\t");
+    system("pause");
+    return fp;
+
+}
+
+void display(FILE * fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    //Student s;
+    int i ,siz = sizeof(s);
+
+    rewind(fp);
+
+    while((fread(&s,siz,1,fp))==1){
+        printf("\n\t\tNAME : %s",s.name);
+        printf("\n\n\t\tDEPERTMENT : %s",s.dept);
+        printf("\n\n\t\tRoll : %d",s.roll);
+        printf("\n\n\t\tC.G.P.A : %f\n\n",s.cgpa);
+        border();
+    }
+    printf("\n\n");
+    border();
+    printf("\n\n");
+    system("pause");
+}
+
+
+void Indivisual(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    int tempRoll,flag,siz,i;
+    //Student s;
+    char another='y';
+
+    siz=sizeof(s);
+
+    while(another=='Y'||another=='y'){
+        printf("\n\n\tENTER ROLL NUMBER : ");
+        scanf("%d",&tempRoll);
+        flag=0;
+
+        rewind(fp);     //for searching purpose we shoould always use this
+
+        while((fread(&s,siz,1,fp))==1){
+            if(s.roll==tempRoll){
+                flag=1;
+                break;
+            }
+        }
+
+        if(flag==1)
+        {
+            printf("\n\n\t\tNAME : %s",s.name);
+            printf("\n\n\t\tDEPERTMENT : %s",s.dept);
+            printf("\n\n\t\tROLL : %d",s.roll);
+            printf("\n\n\t\tC.G.P.A. : %f\n\n",s.cgpa);
+            border();
+        }
+        else{
+            printf("\n\n\t\t!!!!! ERROR RECORD NOT FOUND !!!!!");
+        }
+        printf("\n\n\t\tSHOW ANOTHER STUDENT INFORMATION (y/n) : ");
+        fflush(stdin);
+        another = getche();
+        
+    }
+
+}
+
+void modify(FILE *fp){
+    system("cls");
+    border();
+    printf("\n");
+    title();
+    printf("\n");
+    border();
+
+    //Student s;
+    int i,flag=0,tempRoll,siz;
+
+    float cgpa;
+    siz=sizeof(s);
+
+    printf("\n\nENTER THE ROLL NUMBER OF THE STUDENTS : ");
+    scanf("%d",&tempRoll);
+
+    rewind(fp);
+
+    while((fread(&s,siz,1,fp))==1){
+        if(s.roll==tempRoll){
+            flag = 1 ;
+            break;
+        }
+
+    }
+
+    if(flag==1){
+
+        printf("\n\n\t\t\t\t\tRECORD FOUND\n\n\n");
+        border();
+
+        printf("\n\n\t\t\tSTUDENT NAME : %s",s.name);
+        printf("\n\n\t\t\tSTUDENT ROLL : %d/n",s.roll);
+        border();
+        printf("\n\n\n\n\t\t\tENTER NEW DATA DOR THE STUDENT\n\n\n");
+        border();
+
+        printf("\n\n\n\t\t\tENTER FULL NAME OF STUDENT : ");
+        scanf("%s",&s.name);
+
+        printf("\n\n\t\t\tENTER DEPERTAMENT : ");
+        scanf("%s",&s.dept);
+
+        printf("\n\n\t\t\tENTER ROLL NUMBER : ");
+        scanf("%d",&s.roll);
+
+        printf("\n\n\t\tENTER C.G.P.A. : ");
+        scanf("%f",&s.cgpa);
+
+        //now update in the file
+        fseek(fp, -siz, SEEK_CUR);
+        fwrite(&s,sizeof(s),1,fp);
+        fflush(stdin);
+    }
+    else{
+        printf("\n\n\t!!!! ERROR !!!! RECORD NOT FOUND");
+    }
+
+    printf("\n\n\t");
+    system("pause");
+}
+
+
+---- ./push2git.sh ----
+#!/bin/bash
+
+#warning
+
+#"WARNING: Executing personal scripts can expose your system to security risks and unintended consequences.
+#ure you thoroughly understand the script’s functionality, trust its source, and have backups of important data before proceeding.
+#Always review the code and consider the potential impact on your system and data privacy.
+#Proceed with caution and at your own risk."
+#
+#this is a personal project of ADITYA KUMAR gh- https://github.com/roxxamay
+#
+
+
+#intro
+
+tput setaf 5
+
+cat <<"EOF"
+
+░▄▀▀▄░█░▒█░█▀▀░█░░░░█▀█░█▀▀▀░░▀░░▀█▀░░░░█▀▀░█░░░
+░█▄▄█░█░▒█░▀▀▄░█▀▀█░▒▄▀░█░▀▄░░█▀░░█░░▄▄░▀▀▄░█▀▀█
+░█░░░░░▀▀▀░▀▀▀░▀░░▀░█▄▄░▀▀▀▀░▀▀▀░░▀░░▀▀░▀▀▀░▀░░▀
+
+EOF
+
+#command to backup everything inside the project folder
+
+cat <<"EOF"
+
+░█▀▀▄░█▀▄░█▀▄░░▀░░█▀▀▄░█▀▀▀░░░█▀▀▄░█░░█░
+░█▄▄█░█░█░█░█░░█▀░█░▒█░█░▀▄░░░█▄▄█░█░░█░
+░▀░░▀░▀▀░░▀▀░░▀▀▀░▀░░▀░▀▀▀▀░░░▀░░▀░▀▀░▀▀
+
+EOF
+
+git add --all .
+
+#give the comment is you want 
+
+cat <<"EOF"
+
+░█░░░█░█▀▀▄░░▀░░▀█▀░█▀▀░░░█░░█░▄▀▀▄░█░▒█░█▀▀▄░░░█▀▄░▄▀▀▄░█▀▄▀█░█▀▄▀█░░▀░░▀█▀
+░▀▄█▄▀░█▄▄▀░░█▀░░█░░█▀▀░░░█▄▄█░█░░█░█░▒█░█▄▄▀░░░█░░░█░░█░█░▀░█░█░▀░█░░█▀░░█░
+░░▀░▀░░▀░▀▀░▀▀▀░░▀░░▀▀▀░░░▄▄▄▀░░▀▀░░░▀▀▀░▀░▀▀░░░▀▀▀░░▀▀░░▀░░▒▀░▀░░▒▀░▀▀▀░░▀░
+
+EOF
+
+read input
+
+git commit -m "$input"
+
+if grep -q main .git/config; then
+        echo "Using main"
+            git push -u origin main
+fi
+
+if grep -q master .git/config; then
+        echo "Using master"
+            git push -u origin master
+fi
+
+cat <<"EOF"
+
+░█▀▀▀░░▀░░▀█▀░░░▄▀▀▄░█░▒█░█▀▀░█░░░░░░█▀▄░▄▀▀▄░█▀▀▄░█▀▀
+░█░▀▄░░█▀░░█░░░░█▄▄█░█░▒█░▀▀▄░█▀▀█░░░█░█░█░░█░█░▒█░█▀▀
+░▀▀▀▀░▀▀▀░░▀░░░░█░░░░░▀▀▀░▀▀▀░▀░░▀░░░▀▀░░░▀▀░░▀░░▀░▀▀▀
+
+EOF
+
+
+---- ./COLLAGE-PROGRAM/private/1_g.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{ 
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -====.  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -.-====:-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ .-========::.@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.-==========..:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -===========..::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--=: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -===========::::@                     @@@@      .+##@@@@@@@@@##*=+- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -===========-:::.------:::::::::::::::@@.-#+=---=*#+ @@@@@@@ +####++- @@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@            @@@@@@@@@@@@@ -===========::::.---------------------@@.:#########=.--@@@@@-+######- @@@@@@@@@@   ..    @@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@:....::::::---.  @@@@@@@@ -===========..::.---------------------...-#########*---@@@@ *#######=:---@@@@@ ==--===-=*  @@@@@@@");
+printf("\n@@@@@   *****+: @@@@@@@@@@--------------:::. @@@@@@@.-=========:.:::.---------------------...-=#########+:--@@@ =######=-----@@@@*=+*********==-@@@@@@");
+printf("\n@@@  *==******+=+: @@@@@@@-----------------:..@@@@@@ .-=======:.::::.---------------------... -#########=.--@@@=*######-:---@@@@**************+*- @@@@");
+printf("\n@@  =************+= @@@@@@::----------------::-@@@@@@ ..:--..:.::::..---------------------...@:-########*=--@@ =######+-----@@@ +****************=-@@@");
+printf("\n@ .=***************- @@@@@::------------------...@@@@@  .::..::::::@.---------------------...@ =#########=:--@+*######-:----@@@=*****************.--@@");
+printf("\n@..*****************- =@@@.:------------------:...@@@ -==------::.@@.---------------------...@@:-########*=-- =#######=----@@@ +*****************+===@");
+printf("\n@=+******************===@@.:-------------------....@@-==========@@@@.--------------------:...@@ =#########=:-=*######=:----@@@.=******************:==#");
+printf("\n  *******************=.==@.:-----: ...:--------....@@==========::::@.--------------------:...@@@.-########*=:-#######=----@@@@+********:.+******** -==");
+printf("\n  *******+.==+********+==@.:-----. ....:--------:..@@==========::::@.--------------------:...@@@ =#########=-*######=:----@@@@********+--.+******* -==");
+printf("\n  ******+.-=--********+===.:-----. .... :-------:...@-=========::::@.--------------------....@@@ .-########**#######=----@@@@@********:-=.+******* -==");
+printf("\n  ******+ ===+********+-==::-----. ..@@ :-------:...@-=========::::@.--------------------....@@@@ +################-:----@@@@@********:-=-******** -==");
+printf("\n  ******+ ===*********+:==:------. ..@@ --------:...@-=========::::@.---:.-------- ..........@@@@@ :###############+----@@@@@@*********=.+******** -==");
+printf("\n  *******+===*********+:==-------. ..@@@--------:...@-=========::::@@@@@..-------- ..........@@@@@ *##############-:----@@@@@@   :-==- +********** -==");
+printf("\n  ********-  .********+:==-------. ..@@@--------:...@-=========::::@@@@@@@-------- ..@@@@@@@@@@@@@@ :#############+----@@@@@@@@@@===.+************ -==");
+printf("\n        .*************+-==-------. ...@@--------:...@-=========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@#############-.---@@@@@@@@@@ + +************** -==");
+printf("\n@@@  .****************+-==-------:....@ -------:....@-=========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@ :###########-.---@@@@@@@@@  =**************** -==");
+printf("\n@@#=.*****************+===--------:...@ .------.....@-=========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@**##########-.---@@@@@@@@*.+*****************.-==");
+printf("\n@#+*******************+===--------:...@ :------.....@-=========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ -##########-.---@@@@@@@ ***********+********:===");
+printf("\n@ +*********++********+-==--------:...:--------:....@-=========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ *##########-.---@@@@@@ .=*******++*.:*******-===");
+printf("\n .*******+*+..********+:==--------:...::------:....@@==========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ =##########-.---@@@@@@ +*******+:.-=-*******-===");
+printf("\n.*******+.====********+===--------:..:--------.....@@==========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ :##########-.---@@@@@@ =*******:-===-*******====");
+printf("\n ******=======********+===-------------------:.....@@==========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ :##########-.---@@@@@@.+*****+=====.:*******====");
+printf("\n ******:-=== +********+===-------------------.....@@@==========::::@@@@@@ -------- ..@@@@@@@@@@@@@@@@ :##########-:---@@@@@@:+*****-:::=+:-*******====");
+printf("\n *******:==**+********+===------------------:.....@@@==========::::@@@@@@ --------...@@@@@@@@@@@@@@@@ :##########-:---@@@@@@ =******-::+**********====");
+printf("\n *********************+===-----------------:.....@@@@==========::::@@@@@@ --------...@@@@@@@@@@@@@@@@ :##########-:---@@@@@@ +********************====");
+printf("\n-*********************+==-:---------------:......@@@@==========::::@@@@@@ --------...@@@@@@@@@@@@@@@@ :##########-:---@@@@@@@=+*******************====");
+printf("\n =********************+==-.-------------::......@@@@@==========::::@@@@@@ --------...@@@@@@@@@@@@@@@@ :##########=:---@@@@@@@ +*****************=-====");
+printf("\n@ =*******************+==:.----------:::.......@@@@@@::::::::::::::@@@@@@ ::::::::...@@@@@@@@@@@@@@@@:=##########-:---@@@@@@@@*=+*************-+-:-===");
+printf("\n@  *-*************+--+===-.........:::........@@@@@@@    .......:::@@@@@@        ....@@@@@@@@@@@@@@@@=+##*+++++++-:---@@@@@@@@@ --+*******--++:-=====#");
+printf("\n@@@  ++=--------++=::=====        ..........@@@@@@@@@@@@:::::::::::@@@@@@@@@ ........@@@@@@@@@@@@@@@@@@@@-------------@@@@@@@@@@  =+++++++::-======+@@");
+printf("\n@@@@@+-: :::::::==========@@@............@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@------------@@@@@@@@@@@@@@===============@@@@");
+printf("\n@@@@@@@@==============@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@========:@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+printf("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+
+getch();                                                                                     
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/10.c ----
+/*
+10) write a program to input 3 numbers and print the sum of theirs squares respecively.
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int a,b,c,sum;
+    printf("\nENTER YOUR THREE NUMBERS:");
+    scanf("%d%d%d",&a,&b,&c);
+
+    //calculation
+
+    sum=(a*a)+(b*b)+(c*c);  //altier sum=pow(a,2)+pow(b,2)+pow(c,2);
+
+    printf("\nSUM:%d",sum);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/11.c ----
+// 11) write a program to input a number and print the square root of that number.
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int x,a;
+    printf("\nENTER THE DESIRIABLE NUMBER:");
+    scanf("%d",&x);
+
+    //calculation
+
+    a=sqrt(x);      //ALTIER a=pow(x,0.5);
+
+    printf("\nSQUARE ROOT OF %d IS %d",x,a);
+    getch();
+
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/12.c ----
+// 12) write a program to input two number and print the square root of the sum of the squares of both numbers.
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int x,y;
+    float a;
+    printf("\nENTER TWO DESIREABLE NUMBERS:");
+    scanf("%d%d",&x,&y);
+
+    //calculation
+
+    a=sqrt((x*x)+(y*y));
+
+    printf("\nSQUARE ROOT OF THE SQUARES OF %d AND %d IS %f",x,y,a);
+    getch();
+    
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/13.c ----
+// 13) write a program to solve : (x+y+z)/x*x
+
+#include"stdio.h"
+#include"math.h"
+#include"stdio.h"
+
+int main(void)
+{
+    int x,y,z;
+    float a;
+    printf("\nENTER THREE DESIRABLE NUMBER:");
+    scanf("%d%d%d",&x,&y,&z);
+
+    //calculation
+
+    a=(x+y+z)/(x*x);
+
+    printf("\na=(x+y+z)/(x*x)=%f",a);
+    getch();
+    
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/14.c ----
+/*
+
+14) if the basic salary and net salary is given find out the percentage of increasement.
+
+*/
+
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int bs,ns;
+    float x;
+
+    printf("\nENTER THE BASIC SALARY:");
+    scanf("%d",&bs);
+    printf("\nENTER THE NET SALARY:");
+    scanf("%d",&ns);
+
+    //calculation
+
+    x=((ns-bs)*100)/bs;
+
+    printf("\n%f is the percentage of increasement",x);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/15a.c ----
+// diffrent type of circuit diagram
+//and gate
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int a,b,c;
+    printf("\nENTER THE FIRST INPUT:");
+    scanf("%d",&a);
+    printf("\nENTER THE SECOND INPUT:");
+    scanf("%d",&b);
+
+    //calculation
+
+    c=a&&b;
+
+    printf("\n%d IS THE OUTPUT THROUGH THE AND GATE",c);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/15b.c ----
+// diffrent type of circuit diagram
+// OR gate
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    int a, b, c;
+    printf("\nENTER THE FIRST INPUT:");
+    scanf("%d", &a);
+    printf("\nENTER THE SECOND INPUT:");
+    scanf("%d", &b);
+
+    // calculation
+
+    c = a || b;
+
+    printf("\n%d IS THE OUTPUT THROUGH THE OR GATE", c);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/15c.c ----
+// diffrent type of circuit diagram
+// NOT GATE
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    int a,c;
+    printf("\nENTER THE FIRST INPUT:");
+    scanf("%d", &a);
+
+    // calculation
+
+    c =! a;
+
+    printf("\n%d IS THE OUTPUT THROUGH THE NOT GATE", c);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/15dii.c ----
+// diffrent type of circuit diagram
+// CUSTOM CIRCUIT
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    int a, b, c, d, e, f;
+    printf("\nENTER THE FIRST INPUT:");
+    scanf("%d", &a);
+    printf("\nENTER THE SECOND INPUT:");
+    scanf("%d", &b);
+    printf("\nENTER THE THIRD INPUT:");
+    scanf("%d", &c);
+
+    // calculation
+
+    c=a||b;
+    e=!b&&d;
+    f=c||e;
+
+    printf("\n%d IS THE OUTPUT THROUGH THE CUSTOM GATE",f);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/15diii.c ----
+// diffrent type of circuit diagram
+// CUSTOM CIRCUIT
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    int a, b, c, d, e;
+    printf("\nENTER THE FIRST INPUT:");
+    scanf("%d", &a);
+    printf("\nENTER THE SECOND INPUT:");
+    scanf("%d", &b);
+
+    // calculation
+
+    c=(!a)||(!b);
+    d=b||(!a);
+    e=c&&(!d);
+
+
+    printf("\n%d IS THE OUTPUT THROUGH THE CUSTOM GATE", e);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/16a.c ----
+// differnt types of figure with *
+/*
+*
+**
+***
+****
+*****
+*/
+
+
+#include"stdio.h"
+#include"conio.h"
+
+int main(void)
+{
+   auto short int i,j,n;
+   printf("\nENTER THE NUMBER OF LINES:");
+   scanf("%hd",&n);
+   for(i=1;i<=n;i++)
+   {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+   }
+   getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/16b.c ----
+// differnt types of figure with *
+
+#include "stdio.h"
+#include "conio.h"
+
+int main(void)
+{
+    auto short int i, j,k, n;
+    printf("\nENTER THE NUMBER OF LINES:");
+    scanf("%hd", &n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=(n-i);j++)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++)
+        {
+            printf("*");
+        }
+        printf("\n");
+
+    }
+
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/16c.c ----
+// different types of figure using *
+#include"stdio.h"
+#include"conio.h"
+
+int main(void)
+{
+    auto short int i,j,k,n;
+    printf("\nENTER THE NUMBERS OF LINE:");
+    scanf("%hd",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n-i;j++)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=(2*i)-1;k++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/17.c ----
+//WAP TO PRINT DIAGONALLY 1 AND ELSE 0 IN A MAATRIX.
+
+#include"stdio.h"
+#include"math.h"
+
+int main(void)
+{
+    auto short int i,j,n;
+    printf("\nENTER THE NUMBERS OF LINES:");
+    scanf("%hd",&n);
+
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            if(i==j)
+            {
+                printf("1");
+            }
+            else
+            {
+                printf("0");
+            }
+        }
+        printf("\n");
+    }
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/18.c ----
+// 18)WAP TO OUPTPUT THE VALUE OF n!.
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    long int n,x=1,i;
+    printf("\nENTER THE VALUE TO PROCESS FACTORIAL:");
+    scanf("%d",&n);
+
+    //calculation
+    for(i=1;i<=n;i++)
+    {
+        x=x*i;
+    }
+    printf("\nFACTORIAL OF %d IS %d",n,x);
+    getch();
+}
+
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_a.c ----
+/*********************************************************************
+1) different shapes with *
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{
+    printf("**********");
+    printf("\n*********");
+    printf("\n********");
+    printf("\n*******");
+    printf("\n******");
+    printf("\n*****");
+    printf("\n****");
+    printf("\n***");
+    printf("\n**");
+    printf("\n*");
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_b.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{
+    printf("*");
+    printf("\n**");
+    printf("\n***");
+    printf("\n****");
+    printf("\n*****");
+    printf("\n******");
+    printf("\n*******");
+    printf("\n********");
+    printf("\n*********");
+    printf("\n**********");
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_c.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{
+    printf("\n**********");
+    printf("\n *********");
+    printf("\n  ********");
+    printf("\n   *******");
+    printf("\n    ******");
+    printf("\n     *****");
+    printf("\n      ****");
+    printf("\n       ***");
+    printf("\n        **");
+    printf("\n         *");
+
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_d.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{
+    printf("\n         *");
+    printf("\n        **");
+    printf("\n       ***");
+    printf("\n      ****");
+    printf("\n     *****");
+    printf("\n    ******");
+    printf("\n   *******");
+    printf("\n  ********");
+    printf("\n *********");
+    printf("\n**********");
+
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_e.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+#include"stdio.h"
+
+int main(void)
+{
+    printf("\n     *     ");
+    printf("\n    ***    ");
+    printf("\n   *****   ");
+    printf("\n  *******  ");
+    printf("\n ********* ");
+    printf("\n***********");
+
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/1_f.c ----
+/*********************************************************************
+1) different shapes with * .
+********************************************************************/
+
+#include"stdio.h"
+
+int main(void)
+{
+    printf("\n***********");
+    printf("\n ********* ");
+    printf("\n  *******  ");
+    printf("\n   *****   ");
+    printf("\n    ***    ");
+    printf("\n     *     ");
+
+    getch();
+    
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/21b.c ----
+// MISC
+
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    int a, b, c,d, i, j;
+    printf("\nENTER THE VALUE OF A");
+    scanf("%d", &a);
+    printf("\nENTER THE VALUE OF B");
+    scanf("%d", &b);
+    printf("\nENTER THE VALUE OF C");
+    scanf("%d", &c);
+    printf("\nENTER THE VALUE OF D");
+    scanf("%d", &d);
+
+    for (i = 1; i <= 4; i++)
+    {
+        for (j = 1; j<=4; j++)
+        {
+
+            if (i == 1 && j == 1)
+            {
+                printf("%d", a);
+            }
+            else if (i == 4 && j == 1)
+            {
+                printf("%d", b);
+            }
+            else if (j == 4 && i == 4)
+            {
+                printf("%d", d);
+            }
+            else if (j == 4 && i == 1)
+            {
+                printf("%d", c);
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/22.c ----
+//22)underroot((m! + n!)/n!)
+
+#include "stdio.h"
+#include "math.h"
+#include "conio.h"
+
+int main(void)
+{
+    long int x=1,y=1, n,m, i,z;
+    printf("\nENTER THE VALUE OF M:");
+    scanf("%d", &m);
+    printf("\nENTER THE VALUE OF M:");
+    scanf("%d", &n);
+
+    // calculation
+    for (i = 1; i <= n; i++)
+    {
+        x = x * i;
+    }
+
+    for (i = 1; i <= m; i++)
+    {
+        y = y * i;
+    }
+
+    z=sqrt((x+y)/y);
+    printf("solution is %d",z);
+    getch();
+}
+
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/2b.c ----
+//+++++++swapping a number
+
+
+#include"math.h"
+#include"stdio.h"
+#include"conio.h"
+
+int main(void)
+{
+    int a,b;
+    printf("\nenter the first number:");
+    scanf("%d",&a);
+    printf("\n enter the second number:");
+    scanf("%d",&b);
+
+    //calculation
+
+    a=a-b;
+    b=a+b;
+    a=b-a;
+
+    printf("\n hence after swapping the first number is %d and the second number is %d",a,b);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/2c.c ----
+//++++++++++swapping of the two number
+
+
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int x,y;
+    printf("\n ENTER THE FIRST NUMBER:");
+    scanf("%d",&x);
+    printf("\nENTER THE SECOND NUMBER:");
+    scanf("%d",&y);
+    //CALCULATION
+
+    x=x*y;
+    y=x/y;
+    x=x/y;
+
+    printf("\nHENCE THE FIRST NUMBER IS %d \n AND SECOND NUMBER IS %d",x,y);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/2d.c ----
+//+++swapping of the two numbers
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main()
+{
+    int x,y;
+    printf("\nENTER THE FIRST NUMBER:");
+    scanf("%d",&x);
+    printf("\nENTER THE SECOND NUMBER:");
+    scanf("%d",&y);
+
+    //calculation
+
+    x=pow(x,y);
+    y=pow(x,y);
+    x=pow(x,y);
+    y=y%10;
+    x=x%10;
+
+    printf("\n HENCE THE FIRST NUMBER IS %d ",y);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/3.c ----
+//++++values of the differnt types of data types..
+
+#include"stdio.h"
+#include"conio.h"
+#include"stdio.h"
+
+int main(void)
+{
+    int a;
+    char b;
+    float c;
+    double d;
+    printf("\nsizeof(a) i.e integer is %d",sizeof(a));
+    printf("\nsizeof(b) i.e character is %d",sizeof(b));
+    printf("\nsizeof(c)) i.e float is %d",sizeof(c));
+    printf("\nsizeof(d) i.e. double is %d",sizeof(d));
+    printf("\nsizeof(int) is %d",sizeof(int));
+    printf("\nsizeof(char) is %d",sizeof(char));
+    printf("\nsizeof(double) is %d",sizeof(double));
+    printf("\nsizeof(10) is %d",sizeof(10));
+    printf("\nsizeof('x') is %d",sizeof('x'));
+    printf("\nsizeof(10.45) is %d",sizeof(10.45));
+    printf("\nsizeof(10.4e5) is %d",sizeof(10.4e5));
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/4.c ----
+/*
+4) write a program to accept 3 digit number from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int a,b,c,sum_ac,sum_tot,rev,num;
+    printf("\nenter the first digit:");
+    scanf("\n%1d",&a);
+    printf("\nenter the second digit:");
+    scanf("%1d",&b);
+    printf("\nenter the third digit:");
+    scanf("%1d",&c);
+    //calculations
+    num=100*a+10*b+1*c;
+
+    rev=100*c+10*b+1*a;
+
+    sum_ac=a+c;
+
+    sum_tot=a+b+c;
+
+    printf("\n firstly the inputed digits make the number %d",num);
+    printf("\n\tthen the sum of the first and the second digit is %d",sum_ac);
+    printf("\n\t\tafter reverse the number would be %d ",rev);
+    printf("\n\t\t\tsum of the total digits %d",sum_tot);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/5a.c ----
+/*
+5) write a program to accept 3 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int n,rev=0,r;
+    printf("\nENTER THE DESIRED THREE DIGIT NUMBER:");
+    scanf("%3d",&n);
+    //calculation
+    r=n%10;  //finding the ones digit
+    rev=(rev*10)+r;  
+    n=n/10;  //digitss wexpect one digit
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    printf("\nHENCE THE REVERSE NUMBER IS:%d",rev);
+    getch();
+
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/5b.c ----
+/*
+5) write a program to accept 3 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int n,sum=0,r;
+    printf("\nENTER THE THREE DIGIT NUMBER:");
+    scanf("%3d",&n);
+
+    //calculation
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    r=n%10;
+    sum=sum=r;
+    n=n/10;
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    printf("\nHENCE THE SUM OF THE ALL DIGITS IS:%d",sum);
+    getch();
+    
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/5c.c ----
+/*
+5) write a program to accept 3 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"math.h"
+#include"stdio.h"
+#include"conio.h"
+
+int main(void)
+{
+    int n,r,sum=0;
+    printf("\nENTER THE THREE DIGIT NUMBER:");
+    scanf("%3d",&n);
+
+    //calculation
+
+    r=n%10;
+    sum=sum+r;
+    n=n/100;
+
+    r=n%10;
+    sum=sum+r;
+
+    printf("\nTHE SUM OF THE FIRST AND THE LAST DIGIT OF THE NUMBER IS %d",sum);
+    getch();
+    
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/6a.c ----
+/*
+6) write a program to accept 4 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int n,rev=0,r;
+    printf("\nENTER THE FOUR DIGIT NUMBER:");
+    scanf("%4d",&n);
+
+    //calculation
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    r=n%10;
+    rev=(rev*10)+r;
+    n=n/10;
+
+    printf("\n THE REVERSE OF THE INPUTED 4 DIGIT NUMBER IS:%d",rev);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/6b.c ----
+/*
+6) write a program to accept 4 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int n,sum=0,r;
+    printf("\nENTER THE FOUR DIGIT DESIRED NUMBER:");
+    scanf("%4d",&n);
+
+    //calcculation
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    r=n%10;
+    sum=sum+r;
+    n=n/10;
+
+    printf("\nHENCE THE SUM OF THE GIVEN DIGITS OF THE NUMBER IS %d ",sum);
+    getch();
+    
+
+}
+
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/6c.c ----
+/*
+6) write a program to accept 4 digit number(same time) from keyboard and then perform following operations.
+        a) reverse of the number
+        b) sum of the particular degits
+        c) sum of the first and last number
+*/
+
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int sum=0,n,r;
+    printf("\nENTER THE FOUR DIGIT NUMBER:");
+    scanf("%4d",&n);
+
+    //calculation
+    
+    r=n%10;
+    sum=sum+r;
+    n=n/1000;
+
+    r=n%10;
+    sum=sum+r;
+    
+    printf("\nHENCE THE SUM OF THE FIRST AND THE LAST DIGIT OF THE GIVEN NUMBER IS %d",sum);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/7.c ----
+// 7)write a program to reverse a 9 digit number.
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    long int num,rev=0,r;
+    
+    printf("\nENTER YOUR 9 DIGIT NUMBER:");
+    scanf("%9ld",&num);
+
+    //calculation for 1st digit
+
+    r=num%10;
+    rev=(rev*10)+r;
+    num=num/10;
+
+    //calculation for 2nd digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 3rd digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 4th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 5th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 6th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 7th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 8th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //calculation for 9th digit
+
+    r = num % 10;
+    rev = (rev * 10) + r;
+    num = num / 10;
+
+    //now print the value
+
+    printf("\nREVERSE OF THE GIVEN NUMBER IS %ld",rev);
+    getch();
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/8.c ----
+//8)write a program to obtain the sum of the 1st and last digit of the given 5 digit number.
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int num,sum=0,r;
+
+    printf("\nENTER THE 5 DIGIT NUMBER:");
+    scanf("%5d",&num);
+
+    //calculation for the ones digit
+
+    r=num%10;
+    sum=sum+r;
+
+    //calculation for the last digit
+
+    r=num/10000;
+    sum=sum+r;
+
+    //now printing the value
+
+    printf("\nSUM OF THE FIRST AND LAST DIGIT OF THE NUMBER IS %d",sum);
+    getch();
+
+}
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/9.c ----
+/*
+9)write a program to input two 5 digits numbers and do the following task
+                total(sum) of the both number
+                sum of the disits of the total
+*/
+
+#include"stdio.h"
+#include"math.h"
+#include"conio.h"
+
+int main(void)
+{
+    int num1,num2,total,r,sum=0;
+
+    printf("\nENTER TWO NUMBERS OF 5 DIGITS:");
+    scanf("%5d%5d",&num1,&num2);
+
+    //calculation of the sum of both numbers i.e named as total
+
+    total=num1+num2;
+
+    //now calculation of the sum of the digits of the total
+
+    r=total%10;             //for 1st digit
+    sum=sum+r;
+    total=total/10;
+
+    //for second digit
+
+    r = total % 10;
+    sum = sum + r;
+    total = total / 10;
+
+    //for 3rd digit
+
+    r = total % 10;
+    sum = sum + r;
+    total = total / 10;
+
+    //for 4th digit
+
+    r = total % 10;
+    sum = sum + r;
+    total = total / 10;
+
+    //for 5th digit
+
+    r = total % 10;
+    sum = sum + r;
+    total = total / 10;
+
+    //for 6th digit(incase the total exceeded by 1 digit)
+
+    r = total % 10;
+    sum = sum + r;
+    total = total / 10;
+
+    total=num1+num2;//because in order to sum of the digts our calculated total became 0 so we once again make it the total off num1 and num 2
+
+    //now print the value
+
+    printf("\nTHE TOTAL OF THE BOTH NUMBER IS %d",total);
+    printf("\nSUM OF THE DIGITS OF THE TOTAL IS %d",sum);
+    getch();
+
+}
+
+
+
+---- ./COLLAGE-PROGRAM/SATYENDRA-SIR/sqrt1.c ----
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    int a,x,b;
+    printf("enter the number");
+    scanf("%d",&a);
+
+    //calculation
+
+    x=b*b;
+
+    x=a;
+    printf("\nsquare root",b);
+    getch();
+
+}
+
+
+---- ./DS-TUTION/1.c ----
+/*********************************************************************
+1. WAP TO PERFORM THE FOLLOWING OPERATION ON STACK USING ARAAY STATICALLY
+              PUSH,POP,PEEP,REVERSE PEEP
+********************************************************************/
+#include"SUA.h"
+
+int main()
+{
+    int ch;
+    do
+    {
+        printf("\n1.push\n2.pop\n3.peep\n4.reverse peep");
+        printf("\n0.exit\nENTER YOUR DESIRED CHOICE:");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:push();break;
+            case 2:pop();break;
+            case 3:peep();break;
+            case 4:rev_peep();break;
+            case 0:exit(0);
+        }
+        getch();
+
+    }
+    while(15!=0);
+    
+}
+
+
+---- ./DS-TUTION/2.c ----
+#include"DS2A.H"
+
+int main(void)
+{
+    int ch;
+    do
+    {
+        system("cls");
+        printf("\n1.PUSH IN STACK 1\n2.PUSH IN STACK 2\n3.POP IN STACK 1\n4.POP IN STACK 2\n5.PEEP STACK 1");
+        printf("\n6.PEEP STACK 2\n7.REVERSLY PEEP STACK 1\n8.REVERSLY PEEP STACK 2\n0.EXIT");
+        printf("\nENTER YOUR CHOICE:");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:push_one();
+                break;
+            case 2:push_two();
+                break;
+            case 3:pop_one();
+                break;
+            case 4:pop_two();
+                break;
+            case 5:peep_one();
+                break;
+            case 6:peep_two();
+                break;
+            case 7:rev_peep_one();
+                break;
+            case 8:rev_peep_two();
+                break;
+            case 0:exit(0);
+        }
+        getch();
+
+    }
+    while(2);
+}
+
+
+---- ./DS-TUTION/4.c ----
+#include"LUA.h"
+
+int main(void)
+{
+    int ch;
+    do
+    {
+        system("cls");
+        printf("\n1.INSERT AT END\n2.INSERT FROM BEGIN\n3.INSERT AFTER A NUMBER\n4.BEFORE A NUMBER");
+        printf("\n5.INSERT BETWEEN TWO NUMBER\n6.DELETE A PARTICULAR\n7.DELETE FROM END\n8.DELETE FROM BEGIN\n9.DELETE AFTER A NUMBER");
+        printf("\n10.DELETE BEFORE A NUMBER\n11.DELETE BETWEEN A NUMBER\n12.UPDATE A NUMBER");
+        printf("\n13.SORTING NUMBERS\n14.DISPLAY ALL\n15.REVERSE DISPLAY ALL\n16.SEARCH A NUMBER\n0.EXIT");
+        printf("\nENTER YOUR CHOICE:");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:insert_end();break;
+            case 2:insert_begin();break;
+            case 3:insert_after();break;
+            case 4:insert_before();break;
+            case 5:insert_between();break;
+            case 6:del_par();break;
+            case 7:del_end();break;
+            case 8:del_begin();break;
+            case 9:del_after();break;
+            case 10:del_before();break;
+            case 11:del_betweeen();break;
+            case 12:update();break;
+            case 13:sort();break;
+            case 14:display();break;
+            case 15:rev_display();break;
+            case 16:search();break;
+            case 0:exit(0);break;
+        }
+        getch();
+    }
+    while(2);
+}
+
+
+---- ./exploring-C-programs/1.c ----
+#include"stdio.h"
+#include"conio.h"
+#include"math.h"
+
+int main(void)
+{
+    printf("%d%d%d%d",72,072,0x72,0X72);
+}
+
+
+---- ./exploring-C-programs/2.c ----
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main(void)
+{
+    printf("%d%o%x",72,72,72);
+}
+
+
+---- ./INTERNET-PROGRAM/CLOCK.c ----
+//program for clock
+#include<stdio.h>
+#include<windows.h>
+
+int main()
+{
+    int s,m,h;
+    int d=1000;//we add delay to program to look more realastic
+    printf("ENTER THE TIME (in the format of HH:MM:SS)");
+    scanf("%d:%d:%d",&h,&m,&s);
+    if(h>12||m>60||s>60)
+    {
+        printf("\nWTF! DUDE");
+        exit(0);
+    }
+    while(1)//this makes loop infinite
+    {
+        system("cls");
+        s++;
+        if(s>59)
+        {
+            m++;
+            s=0;
+        }
+        if(m>59)
+        {
+            h++;
+            m=0;
+        }
+        if(h>12)
+        {
+            h=1;
+        }
+
+        printf("\nCLOCK:");
+        printf("%02d:%02d:%02d",h,m,s);
+        Sleep(d);//1000miliseconds=1seconds
+    }
+}
+
+
